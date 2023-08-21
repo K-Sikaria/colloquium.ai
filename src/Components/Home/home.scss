@@ -28,15 +28,6 @@
         mix-blend-mode: hard-light;
     }
 
-    img{
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        bottom: 0;
-        object-fit: cover;
-    }
-
     .homeContent{
         width: 100%;
         height: max-content;
@@ -51,47 +42,26 @@
         z-index: 100;
 
         .textDiv{
-            padding: 2rem 0;
-            .smallText{
-                font-size: 13px;
-                text-transform: uppercase;
-            }
-
+            padding: 2rem 0 4rem;
             .homeTitle{
                 position: relative;
                 font-size: 1.8rem;
+                padding: 0 0 1.5rem;
+            }
+            .smallText{
+                font-size: 11px;
             }
         }
 
         .cardDiv{
             position: relative;
-            padding: 2rem 1rem;
-            background: var(--white);
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0);
             gap: 1rem;
-            label{
-                display: block;
-                color: rgb(173, 176, 176);
-                padding-bottom: 10px;
-                font-size: 13px;
-                font-weight: 500;
-            }
-            .label_total{
-                justify-content: space-between;
-                align-items: center;
-
-                .total{
-                    color: rgb(173, 176, 176);
-                    font-size: 18px;
-                    padding-bottom: 10px;
-                }
-            }
 
             .input{
                 height: 40px;
                 padding: 0 1rem;
                 background: rgb(235, 239, 239);
-                border-radius: 3rem;
 
                 input{
                     background: none;
@@ -104,24 +74,13 @@
                         font-size: 13px;
                     }
                 }
-
-                .icon{
-                    font-size: 18px;
-                    color: var(--steelblue);
-                    margin-left: 10px;
-                }
-
-                .input[type= range]{
-                    background: blue($color: #000000);
-
-                }
             }
 
             .searchOptions{
                 position: absolute;
-                background: var(--gradientColour);
+                background: var(--button);
                 width: max-content;
-                bottom: -.7rem;
+                bottom: -2.5rem;
                 column-gap: .8rem;
                 padding: 5px 1rem;
                 border-radius: 3rem;
@@ -131,7 +90,7 @@
                 cursor: pointer;
 
                 &:hover{
-                    background: var(--steelblue);
+                    background: var(--hover);
                 }
 
                 .icon{
@@ -141,6 +100,20 @@
                 span{
                     font-size: 13px;
                 }
+            }
+        }
+
+        .imageContainer {
+            position: relative;
+            bottom: -10px;
+            right: -10px;
+            border: 5px solid var(--button);
+            overflow: hidden; 
+        
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
             }
         }
 
@@ -199,7 +172,7 @@
         .homeContent{
             .cardDiv{
                 padding: 2rem 1rem;
-                grid-template-columns: repeat(3,1fr);
+
             }
         }
     }
@@ -208,20 +181,38 @@
 @media screen and (min-width: 940px) {
     .home{
         height: 70vh;
+        .homeContent{
+            display: flex;
+            justify-content: row;
+            
+            .textDiv{
+                align-self: flex-start;
+                max-width: 50%;
+            }
+            .cardDiv{
+                align-self: flex-start;
+                max-width: 50%;
+            }
+            .imageContainer{
+                align-self: flex-end;
+                max-width: 40%;
+                top: 0;
+                transform: translateY(-50%);
+            }
+        }
     }
 }
 
 @media screen and (min-width: 1240px) {
     .home{
-        height: 80vh;
+        height: 160vh;
 
         .homeContent{
-            padding-left: 0;
-            padding-right: 0;
+            padding-left: 3;
+            padding-right: 3;
 
             .cardDiv{
                 padding: 2rem 1rem;
-                grid-template-columns: repeat(3,1fr);
             }
         }
     }
