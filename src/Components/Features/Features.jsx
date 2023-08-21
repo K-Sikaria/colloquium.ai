@@ -41,9 +41,9 @@ const Features = () => {
   return (
     <section className='features'>
       <div className='secTitle'>
-        <h3 data-aos='fade-right' className='title'>
+        <h1 data-aos='fade-right' className='title'>
           Crack Interviews Faster!
-        </h3>
+        </h1>
       </div>
 
       <div data-aos='fade-up' className='secContent grid'>

@@ -23,30 +23,23 @@ const Home = () => {
     <section className='home'> 
       <div className='overlay'></div>
       <div className='homeContent container'>
-        <div className='textDiv'>
-          <h1 data-aos="fade-up"
-          className='homeTitle'>
+        <div data-aos="fade-up" className='textDiv'>
+          <h1 className='homeTitle'>
             Colloquium.ai
           </h1>
-          <span data-aos="fade-up"
-          className='smallText'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic 
+          <span className='smallText'>
+          Revolutionize your interview preparation with our AI-integrated platform. Experience tailored guidance, instant feedback, and curated resources for optimizing your interview skills. Our innovative technology adapts to your progress, empowering you to excel in diverse interview scenarios. Elevate your confidence and competence, ensuring you're well-equipped for success in every interview opportunity.
           </span>
-        </div>
-
-        <div data-aos="fade-up" className='cardDiv grid'>
-          <div className='domainInput'>
-            <div className='input flex'>
+          <div data-aos="fade-up" className='input flex'>
               <input type="text" placeholder="Enter your domain here..."/>
             </div>
-            <div className='searchOptions flex'>
+            <div data-aos="fade-up"  className='searchOptions flex'>
             <AiOutlineSearch className='icon'/>
             <span>SEARCH</span>
           </div>
         </div>
-          </div>
 
-        {/*<div data-aos="fade-up"  className='imageContainer'>
+        <div data-aos="fade-up"  className='imageContainer'>
           <img src={homeImg} alt='interview' />
         </div>
         <div data-aos="fade-up" className="homeFooterIcons flex">
@@ -60,7 +53,7 @@ const Home = () => {
             <BsListTask className='icon'/>
             <TbApps className='icon'/>
           </div>
-  </div>*/}
+        </div>
       </div>
     </section>
   )

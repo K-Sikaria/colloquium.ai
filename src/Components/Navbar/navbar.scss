@@ -75,7 +75,7 @@
 
                     a{
                         font-weight: 600;
-                        color: var(--button);
+                        color: var(--white);
                     }
                 }
             }
@@ -131,7 +131,7 @@
                         font-weight: 500;
 
                         &:hover{
-                            color: var(--button);
+                            color: var(--hover);
                         }
                     }
 
@@ -140,7 +140,7 @@
                 .btn{
                     margin-left: 1rem;
                     a{
-                        color: var(--button);
+                        color: var(--white);
                         font-weight: 500;
                     }
                 }

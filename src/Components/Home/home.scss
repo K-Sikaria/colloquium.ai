@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     margin: auto;
+    background: var(--bg2);
 
     .overlay{
         position: absolute;
@@ -51,15 +52,9 @@
             .smallText{
                 font-size: 11px;
             }
-        }
-
-        .cardDiv{
-            position: relative;
-            background: rgba(255, 255, 255, 0);
-            gap: 1rem;
-
             .input{
                 height: 40px;
+                margin-top: 3rem;
                 padding: 0 1rem;
                 background: rgb(235, 239, 239);
 
@@ -80,7 +75,7 @@
                 position: absolute;
                 background: var(--button);
                 width: max-content;
-                bottom: -2.5rem;
+                bottom: -1rem;
                 column-gap: .8rem;
                 padding: 5px 1rem;
                 border-radius: 3rem;
@@ -105,8 +100,6 @@
 
         .imageContainer {
             position: relative;
-            bottom: -10px;
-            right: -10px;
             border: 5px solid var(--button);
             overflow: hidden; 
         
@@ -127,7 +120,7 @@
                 color: var(--white);
                 font-weight: 600;
                 &:hover{
-                    color: var(--steelblue);
+                    color: var(--hover);
                 }
             }
         }
@@ -159,10 +152,6 @@
                     }
                 }
             }
-
-            .cardDiv{
-                grid-template-columns: repeat(2,1fr);
-            }
         }
     }
 }
@@ -170,34 +159,70 @@
 @media screen and (min-width: 660px) {
     .home{
         .homeContent{
-            .cardDiv{
-                padding: 2rem 1rem;
-
-            }
         }
     }
 }
 
 @media screen and (min-width: 940px) {
     .home{
-        height: 70vh;
+        height: 60vh;
         .homeContent{
-            display: flex;
-            justify-content: row;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            gap: 8rem;
+            padding: 8rem 3rem 3rem;
             
-            .textDiv{
-                align-self: flex-start;
-                max-width: 50%;
-            }
-            .cardDiv{
-                align-self: flex-start;
-                max-width: 50%;
+            .textDiv {
+                width: 100%;
+                padding-right: 2rem;
+
+                .homeTitle {
+                    font-size: 2.3rem;
+                    padding: 0 0 2.5rem;
+                    width: max-content;
+                }
+                .smallText {
+                    font-size: 1rem; /* 16px in rem */
+                    padding-bottom: 1.5rem;
+                    margin-top: 3rem;
+                }
+                .input {
+                    height: 2.5rem; /* 40px in rem */
+                    margin-top: 3rem;
+                    padding: 0 1rem;
+                }
+                .searchOptions {
+                    bottom: 4rem; /* -3px in rem */
+                }
             }
             .imageContainer{
-                align-self: flex-end;
-                max-width: 40%;
-                top: 0;
-                transform: translateY(-50%);
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .homeFooterIcons {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem 0;
+
+                .icon {
+                    font-size: 20px;
+                    margin: 0 5px;
+                    color: var(--white);
+                    font-weight: 600;
+                    &:hover {
+                        color: var(--hover);
+                    }
+                }
             }
         }
     }
@@ -210,10 +235,6 @@
         .homeContent{
             padding-left: 3;
             padding-right: 3;
-
-            .cardDiv{
-                padding: 2rem 1rem;
-            }
         }
     }
 }

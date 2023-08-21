@@ -70,7 +70,7 @@
   }
   .header .navBar .navLists .btn a {
     font-weight: 600;
-    color: var(--button);
+    color: var(--white);
   }
   .header .navBar .closeNavbar {
     position: absolute;
@@ -114,13 +114,13 @@
     font-weight: 500;
   }
   .header .navBar .navLists .navItem .navLink:hover {
-    color: var(--button);
+    color: var(--hover);
   }
   .header .navBar .navLists .btn {
     margin-left: 1rem;
   }
   .header .navBar .navLists .btn a {
-    color: var(--button);
+    color: var(--white);
     font-weight: 500;
   }
 }

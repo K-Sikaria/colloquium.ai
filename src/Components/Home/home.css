@@ -16,6 +16,7 @@
   align-items: center;
   justify-content: center;
   margin: auto;
+  background: var(--bg2);
 }
 .home .overlay {
   position: absolute;
@@ -52,17 +53,13 @@
 .home .homeContent .textDiv .smallText {
   font-size: 11px;
 }
-.home .homeContent .cardDiv {
-  position: relative;
-  background: rgba(255, 255, 255, 0);
-  gap: 1rem;
-}
-.home .homeContent .cardDiv .input {
+.home .homeContent .textDiv .input {
   height: 40px;
+  margin-top: 3rem;
   padding: 0 1rem;
   background: rgb(235, 239, 239);
 }
-.home .homeContent .cardDiv .input input {
+.home .homeContent .textDiv .input input {
   background: none;
   border: none;
   outline: none;
@@ -70,18 +67,18 @@
   font-size: 13px;
   font-weight: 500;
 }
-.home .homeContent .cardDiv .input input::-moz-placeholder {
+.home .homeContent .textDiv .input input::-moz-placeholder {
   font-size: 13px;
 }
-.home .homeContent .cardDiv .input input::placeholder {
+.home .homeContent .textDiv .input input::placeholder {
   font-size: 13px;
 }
-.home .homeContent .cardDiv .searchOptions {
+.home .homeContent .textDiv .searchOptions {
   position: absolute;
   background: var(--button);
   width: -moz-max-content;
   width: max-content;
-  bottom: -2.5rem;
+  bottom: -1rem;
   -moz-column-gap: 0.8rem;
        column-gap: 0.8rem;
   padding: 5px 1rem;
@@ -91,19 +88,17 @@
   justify-content: center;
   cursor: pointer;
 }
-.home .homeContent .cardDiv .searchOptions:hover {
+.home .homeContent .textDiv .searchOptions:hover {
   background: var(--hover);
 }
-.home .homeContent .cardDiv .searchOptions .icon {
+.home .homeContent .textDiv .searchOptions .icon {
   font-size: 18px;
 }
-.home .homeContent .cardDiv .searchOptions span {
+.home .homeContent .textDiv .searchOptions span {
   font-size: 13px;
 }
 .home .homeContent .imageContainer {
   position: relative;
-  bottom: -10px;
-  right: -10px;
   border: 5px solid var(--button);
   overflow: hidden;
 }
@@ -124,7 +119,7 @@
   font-weight: 600;
 }
 .home .homeContent .homeFooterIcons .icon:hover {
-  color: var(--steelblue);
+  color: var(--hover);
 }
 
 @media screen and (min-width: 500px) {
@@ -147,36 +142,66 @@
     bottom: 5px;
     z-index: -1;
   }
-  .home .homeContent .cardDiv {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 660px) {
-  .home .homeContent .cardDiv {
-    padding: 2rem 1rem;
-  }
 }
 @media screen and (min-width: 940px) {
   .home {
-    height: 70vh;
+    height: 60vh;
   }
   .home .homeContent {
-    display: flex;
-    justify-content: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 8rem;
+    padding: 8rem 3rem 3rem;
   }
   .home .homeContent .textDiv {
-    align-self: flex-start;
-    max-width: 50%;
+    width: 100%;
+    padding-right: 2rem;
   }
-  .home .homeContent .cardDiv {
-    align-self: flex-start;
-    max-width: 50%;
+  .home .homeContent .textDiv .homeTitle {
+    font-size: 2.3rem;
+    padding: 0 0 2.5rem;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .home .homeContent .textDiv .smallText {
+    font-size: 1rem; /* 16px in rem */
+    padding-bottom: 1.5rem;
+    margin-top: 3rem;
+  }
+  .home .homeContent .textDiv .input {
+    height: 2.5rem; /* 40px in rem */
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+  .home .homeContent .textDiv .searchOptions {
+    bottom: 4rem; /* -3px in rem */
   }
   .home .homeContent .imageContainer {
-    align-self: flex-end;
-    max-width: 40%;
-    top: 0;
-    transform: translateY(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home .homeContent .imageContainer img {
+    width: 100%;
+    height: auto;
+  }
+  .home .homeContent .homeFooterIcons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .home .homeContent .homeFooterIcons .icon {
+    font-size: 20px;
+    margin: 0 5px;
+    color: var(--white);
+    font-weight: 600;
+  }
+  .home .homeContent .homeFooterIcons .icon:hover {
+    color: var(--hover);
   }
 }
 @media screen and (min-width: 1240px) {
@@ -186,8 +211,5 @@
   .home .homeContent {
     padding-left: 3;
     padding-right: 3;
-  }
-  .home .homeContent .cardDiv {
-    padding: 2rem 1rem;
   }
 }/*# sourceMappingURL=home.css.map */
